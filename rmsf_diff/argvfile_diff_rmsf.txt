@@ -1,0 +1,22 @@
+#put the path for each xvg file and the number of head line for each couple of rmsf file (file1.xvg:18:file2.xvg:18). You can change the variable name but, it want inevitably begin by the word couple. No space is tolerated.
+#AC5 AC5+ATP tina
+Couple1:chainA:/home/tamans/home2/ac5_1azs_c1c2pbock/rmsf_chainApbock_res.xvg:17:/home/tamans/home2/ac5_1cjk_c1c2pbock/rmsf_chainApbock_res.xvg:17
+Couple2:chainB:/home/tamans/home2/ac5_1azs_c1c2pbock/rmsf_chainBpbock_res.xvg:17:/home/tamans/home2/ac5_1cjk_c1c2pbock/rmsf_chainBpbock_res.xvg:17
+#AC5+ATP AC5+ATP+Gs tina
+Couple3:chainA:/home/tamans/home2/ac5_1cjk_c1c2pbock/rmsf_chainApbock_res.xvg:17:/home/tamans/home2/ac5_1cjk_c1c2_golfpbock/rmsf_chainApbock_res.xvg:17
+Couple4:chainB:/home/tamans/home2/ac5_1cjk_c1c2pbock/rmsf_chainBpbock_res.xvg:17:/home/tamans/home2/ac5_1cjk_c1c2_golfpbock/rmsf_chainBpbock_res.xvg:17
+#AC5 AC5+Gs tina
+Couple5:chainA:/home/tamans/home2/ac5_1azs_c1c2pbock/rmsf_chainApbock_res.xvg:17:/home/tamans/home2/ac5_1azs_c1c2_golfpbock/rmsf_chainApbock_res.xvg:17
+Couple6:chainB:/home/tamans/home2/ac5_1azs_c1c2pbock/rmsf_chainBpbock_res.xvg:17:/home/tamans/home2/ac5_1azs_c1c2_golfpbock/rmsf_chainBpbock_res.xvg:17
+#AC5+GS AC5+GS+ATP tina 
+Couple7:chainA:/home/tamans/home2/ac5_1azs_c1c2_golfpbock/rmsf_chainApbock_res.xvg:17:/home/tamans/home2/ac5_1cjk_c1c2_golfpbock/rmsf_chainApbock_res.xvg:17
+Couple8:chainB:/home/tamans/home2/ac5_1azs_c1c2_golfpbock/rmsf_chainBpbock_res.xvg:17:/home/tamans/home2/ac5_1cjk_c1c2_golfpbock/rmsf_chainBpbock_res.xvg:17
+#AC5+ATP. AC5+ATP+Gi tina
+Couple9:chainA:/home/tamans/home2/ac5_1cjk_c1c2pbock/rmsf_chainApbock_res.xvg:17:/home/tamans/home2/ac5_1cjk_c2c2_gi_n2/rmsf_chainAres.xvg:17
+Couple10:chainB:/home/tamans/home2/ac5_1cjk_c1c2pbock/rmsf_chainBpbock_res.xvg:17:/home/tamans/home2/ac5_1cjk_c2c2_gi_n2/rmsf_chainBres.xvg:17
+#AC5 AC5+Gi tina
+Couple11:chainA:/home/tamans/home2/ac5_1azs_c1c2pbock/rmsf_chainApbock_res.xvg:17:/home/tamans/home2/ac5_1azs_c2c2_gi_n2/rmsf_chainAres.xvg:17
+Couple12:chainB:/home/tamans/home2/ac5_1azs_c1c2pbock/rmsf_chainBpbock_res.xvg:17:/home/tamans/home2/ac5_1azs_c2c2_gi_n2/rmsf_chainBres.xvg:17
+#AC5+Gi AC5+Gi+ATP tina
+Couple13:chainA:/home/tamans/home2/ac5_1azs_c2c2_gi_n2/rmsf_chainAres.xvg:17:/home/tamans/home2/ac5_1cjk_c2c2_gi_n2/rmsf_chainAres.xvg:17
+Couple14:chainB:/home/tamans/home2/ac5_1azs_c2c2_gi_n2/rmsf_chainBres.xvg:17:/home/tamans/home2/ac5_1cjk_c2c2_gi_n2/rmsf_chainBres.xvg:17

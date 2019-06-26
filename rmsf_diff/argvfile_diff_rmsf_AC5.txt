@@ -1,0 +1,4 @@
+#put the path for each xvg file and the number of head line for each couple of rmsf file (file1.xvg:18:file2.xvg:18). You can change the variable name but, it want inevitably begin by the word couple. No space is tolerated.
+#AC5 tina
+File1:chainA:/home/tamans/home2/ac5_1azs_c1c2pbock/rmsf_chainApbock_res.xvg:17
+File2:chainB:/home/tamans/home2/ac5_1azs_c1c2pbock/rmsf_chainBpbock_res.xvg:17
