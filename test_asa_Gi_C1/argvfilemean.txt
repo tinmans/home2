@@ -1,0 +1,10 @@
+#put the path for xvg file and indicate the name of xvg file then the number of this head line to obtain its mean(path1:/home/tamans file1.xvg:17 file2.xvg:18, files locate in the same path want to be indicated following this path). You can change the variable name but, for the path it want inevitably begin by the word path and for the name file by the file. No space is tolerated.
+path1:/home/tamans/home2/test_asa_Gi_C1/ac5_1azs_c1c2_golf_py/
+file1:burried_surf_area.dat
+path2:/home/tamans/home2/test_asa_Gi_C1/ac5_1cjk_c1c2_golf_py/
+file2:burried_surf_area.dat
+path3:/home/tamans/home2/test_asa_Gi_C1/ac5_1azs_c2c2_gi_n2_py/
+file3:burried_surf_area.dat
+path4:/home/tamans/home2/test_asa_Gi_C1/ac5_1cjk_c2c2_gi_n2_py/
+file4:burried_surf_area.dat
+
