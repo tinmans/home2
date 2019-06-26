@@ -1,0 +1,108 @@
+ 
+Parameters for SURFNET              (surfnet.par)
+----------------------
+ 
+TITLE
+None
+ 
+INPUT FILE
+int.pdb
+
+Output files listed below. The information entered for each is as follows.
+The numbers in square brackets refer to the notes at the end of the file.
+The program names indicate which programs need to be rerun when any of the
+parameters are changed.
+
+            <----SURFNET----><-SURFACE-><----------SURFPLOT------------>
+                                        Foregrnd  Backgrnd        
+                   Atom range            colour    colour     Line 
+          File     1st   Last  Contour   /shade    /shade     width  SOLID
+Filename  type[1] atom   atom  level[2]  (0-10)[3] (0-10)[3]   [4]  /WIRE
+
+OUTPUT FILES
+protein      S      1    5359   100.0       1         1        0.1
+inhibitor    S   6014   11465   100.0       8         8        0.1
+gaps         G      2       1   100.0       5         5        0.1  SOLID
+
+
+
+Program parameters
+------------------
+
+SURFNET
+  0.0   0.0   0.0  <- Origin of grid box (to use: set atom range below to 0 0)
+-1000 10000     <- Atom range defining grid bounds (0 0 to use origin above)
+6.0 6.0 6.0     <- Additional boundary round atom-range/origin (Angstroms)
+0.80      <- Grid separation
+1.0       <- Minimum radius for gap spheres (in Angstroms)
+4.0       <- Maximum radius for gap spheres (in Angstroms)
+I         <- (C)CP4, (I)nsightII, (Q)uanta, (S)ybyl contour files, or (N)one
+Y         <- Calculate gap volume - (Y/N)?
+1.0       <- Scaling factor
+
+SURFPLOT
+P             <- (C)olour/(B)&W Postscript file, (P)DB-format, (R)aster3D
+11            <- Background colour
+
+
+---------------------------------------------------------------------------
+
+Notes:-
+
+Note 1. type is one of the following characters:-
+    A - Atoms only, each atom will be plotted as a sphere
+    a - As for A, but atoms coloured according to B-factor (0-80)
+    B - Bonds between atoms
+    C - Contours generated according to the density of atoms
+    E - Contours generated according to the B-values
+    G - Gap map (see below)
+    J - Each atom coordinate is joined to the one before and after it
+    P - Pairs distribution where each sidechain is shown (by bonds
+        joining the atoms) separately
+    S - Surface contours at van der Waals radius of each atom (contour
+        level of 100.0). If an asterisk, *, follows the S, then the
+        radius of each atom will be picked up from the B-value column
+        of the PBD file. Otherwise, the default van der Waals radii are
+        used.
+    % - As C above, but all density values in the output grid are
+        adjusted such that the value at each grid-point gives the
+        percentage of non-zero grid-points with lower values.
+
+For a Gap map (type G) the first number after it refers to which file is to
+be used for generating gaps from. If this is a zero, then gaps are required
+between ALL atoms. The second number after the G should be a zero.
+
+For a surface contour (type S), each atom/data-point can have its own
+radius defined in the B-value column of the PDB file. This will be used if
+there is an asterisk, *, before the S.
+
+Note 2. The contour level can be entered as a percentage by entry of a %
+after the contour value.
+
+Note 3. Colours can be entered separately for the foreground and projected
+objects. The colours are as follows:
+
+   0=white, 1=yellow, 2=cyan, 3=lime green, 4=green, 5=blue, 6=pink,
+   7=orange, 8=red, 9=purple, 10=black, 11=Light blue, 12=Cream
+
+If the colour PostScript option in SURFPLOT below is set to N, the colour
+values will be interpreted as grey shades (0=white to 10=black).
+
+If the colour is entered as -999 for the foreground object, the object will
+not be displayed. Similarly, for the background projections
+
+For "atom" objects (displayed as spheres), if the colour is set between -1
+and -10, a single point, of the corresponding colour, will be plotted
+rather than a sphere.
+
+For SOLID surfaces, if in black and white, a negative colour causes all
+polygons to be shaded white, giving a sketched, cartoon appearance.
+
+If a 'G' is entered after the background colour, then the background
+object will be displayed in grey (ie as shadow) for a colour PostScript
+file.
+
+Note 4. Line widths can be set to any real number (a sensible range being
+0.0-5.0). The widths of the projected lines will be a fifth of those for
+the foreground object.
+
