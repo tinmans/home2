@@ -1,0 +1,11 @@
+#skip variable in first, and after the file name. Put skip and chain in the same order. You can change the variable name but, for the skip it want inevitably begin by the word skip, for the name file by the file and for the chain name by the chain_name. No space is tolerated.
+skip_xvg_chain1:17
+skip_xvg_chain2:17
+#skip_xvg_chain3:18
+#skip_xvg_chain4:18
+file_name1:rmsf_chainA.xvg
+file_name2:rmsf_chainB.xvg
+#file_name3:rmsd_chainA.xvg
+#file_name4:rmsd_chainB.xvg
+chain_name1:A
+chain_name2:B
