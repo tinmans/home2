@@ -1,0 +1,5 @@
+name file and mean value
+ /home/tamans/home2/test_gap/ac5_1azs_c1c2pbock_py/interface_volume.dat_/home/tamans/home2/test_ASA/ac5_1azs_c1c2pbock_py/burried_surf_area.dat:mean_gap_index:3.05927682553629:sd_gap_index0.32768660941203
+ /home/tamans/home2/test_gap/ac5_1azs_c1c2_golf_py/interface_volume.dat_/home/tamans/home2/test_ASA/ac5_1azs_c1c2_golf_py/burried_surf_area.dat:mean_gap_index:3.07757885816378:sd_gap_index0.279825588002571
+ /home/tamans/home2/test_gap/ac5_1azs_c2c2_gi_n2_py/interface_volume.dat_/home/tamans/home2/test_ASA/ac5_1azs_c2c2_gi_n2_py/burried_surf_area.dat:mean_gap_index:3.02560966189197:sd_gap_index0.288868998120309
+ /home/tamans/home2/test_gap/ac5_1cjk_c2c2_gi_n2_py/interface_volume.dat_/home/tamans/home2/test_ASA/ac5_1cjk_c2c2_gi_n2_py/burried_surf_area.dat:mean_gap_index:3.1192707406349:sd_gap_index0.294910007864571
