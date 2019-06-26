@@ -1,0 +1,11 @@
+#put the path for xvg file and indicate the name of xvg file then the number of this head line to obtain its mean(path1:/home/tamans file1.xvg:17 file2.xvg:18, files locate in the same path want to be indicated following this path). You can change the variable name but, for the path it want inevitably begin by the word path and for the name file by the file. No space is tolerated.
+#path1:/home/tamans/home2/test_gap/ac5_1azs_c1c2pbock/GAP_VOL/
+#file1:Gap_volume.txt
+path1:/home/tamans/home2/test_gap/ac5_1azs_c1c2pbock_py/
+file1:interface_volume.dat
+path2:/home/tamans/home2/test_gap/ac5_1azs_c1c2_golf_py/
+file2:interface_volume.dat
+path3:/home/tamans/home2/test_gap/ac5_1azs_c2c2_gi_n2_py/
+file3:interface_volume.dat
+path4:/home/tamans/home2/test_gap/ac5_1cjk_c2c2_gi_n2_py/
+file4:interface_volume.dat
