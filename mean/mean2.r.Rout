@@ -1,0 +1,61 @@
+
+R version 3.4.0 (2017-04-21) -- "You Stupid Darkness"
+Copyright (C) 2017 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+During startup - Warning message:
+Setting LC_CTYPE failed, using "C" 
+> argfilepath="/home/tamans/home2/mean/argvfilemean.txt"
+> path<-list()
+> i=0
+> j=0
+> cpath=""
+> argv<-read.table(file=argfilepath,row.names=1,sep=":",colClasses=NA)
+> listmean<-c("name file and mean value")
+> sink("mean_file.txt", append=TRUE)
+> for (name in rownames(argv))
++ {
++ 	j<-j+1
++         if (grepl("^#",name)==TRUE)
++         {
++ 		print(paste("the line",j,"is a comment",sep=" "))
++ 	}
++ 	if (grepl("^path",name)==TRUE)
++ 	{
++ 		i<-i+1
++ 		path<-c(path,list(argv[name,1]))
++ 		cpath<-as.character(unlist(path[i]))
++ 	}
++ 	if (grepl("^file",name)==TRUE)
++ 	{
++ 		nskip<-as.numeric(as.character(unlist(argv[name,2])))
++ 		pathfile<-paste(cpath,argv[name,1],sep="")
++ 		rmsd<-read.table(file=pathfile,skip=nskip)
++ 		moyenne<-mean(rmsd$V2)
++ 		squaredeviation<-sd(rmsd$V2)
++ 		value<-paste(pathfile,"mean",moyenne,"sd",squaredeviation, sep=":")
++ 		listmean<-c(listmean,value)
++ 	}
++ }
+> cat(paste0(listmean,"\n")) # to avoid presence of ligne numerotation inthe output file
+> sink()
+> 
+> proc.time()
+   user  system elapsed 
+ 20.180   0.309  21.056 
