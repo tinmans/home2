@@ -1,0 +1,12 @@
+path_input_file:/mobi/group/AC5_Trajectories/ac5_1azs_c2c2_gi_n2/md
+input_tpr_total:md-2.tpr
+input_xtc_total:md_1500.xtc
+input_index_ndx:rigid_bodies/index.ndx
+path_output_file:/home/tamans/home2
+start_time_option:400000
+input_gro:start.gro
+chain_name1:A
+chain_name2:B
+calcul_yes_or_no:yes
+chain_total:yes
+graph_yes_or_no:yes
