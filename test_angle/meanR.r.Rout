@@ -1,0 +1,89 @@
+
+R version 3.4.0 (2017-04-21) -- "You Stupid Darkness"
+Copyright (C) 2017 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+During startup - Warning message:
+Setting LC_CTYPE failed, using "C" 
+> argfilepath="/home/tamans/home2/test_angle/argvfilemean.txt"
+> path<-list()
+> i=0
+> j=0
+> cpath=""
+> argv<-read.table(file=argfilepath,row.names=1,sep=":",colClasses=NA)
+> print(argv)
+                                                      V2
+path1  /home/tamans/home2/test_angle/ac5_1azs_c1c2pbock/
+file1                                       angles_h.dat
+path2  /home/tamans/home2/test_angle/ac5_1azs_c1c2_golf/
+file2                                       angles_h.dat
+path3 /home/tamans/home2/test_angle/ac5_1azs_c2c2_gi_n2/
+file3                                       angles_h.dat
+path4 /home/tamans/home2/test_angle/ac5_1cjk_c2c2_gi_n2/
+file4                                       angles_h.dat
+> listmean<-c("name file and mean value")
+> for (name in rownames(argv))
++ {
++ 	print(argv[name,1])
++         j<-j+1
++         if (grepl("^#",name)==TRUE)
++         {
++                 print(paste("the line",j,"is a comment",sep=" "))
++         }
++         if (grepl("^path",name)==TRUE)
++         {
++                 i<-i+1
++                 path<-c(path,list(argv[name,1]))
++                 cpath<-as.character(unlist(path[i]))
++         }
++         if (grepl("^file",name)==TRUE)
++         {
++                 pathfile<-paste(cpath,argv[name,1],sep="")
++                 angl<-read.table(file=pathfile)
++                 moyenne_a1<-mean(angl$V2)
++                 squaredeviation_a1<-sd(angl$V2)
++                 moyenne_a2<-mean(angl$V3)
++                 squaredeviation_a2<-sd(angl$V3)
++                 value<-paste(pathfile,"mean_a1",moyenne_a1,"sd_a1",squaredeviation_a1,"mean_a2", moyenne_a2, "sd_a2", squaredeviation_a2,sep=":")
++                 listmean<-c(listmean,value)
++         }
++ }
+[1] /home/tamans/home2/test_angle/ac5_1azs_c1c2pbock/
+5 Levels: /home/tamans/home2/test_angle/ac5_1azs_c1c2_golf/ ...
+[1] angles_h.dat
+5 Levels: /home/tamans/home2/test_angle/ac5_1azs_c1c2_golf/ ...
+[1] /home/tamans/home2/test_angle/ac5_1azs_c1c2_golf/
+5 Levels: /home/tamans/home2/test_angle/ac5_1azs_c1c2_golf/ ...
+[1] angles_h.dat
+5 Levels: /home/tamans/home2/test_angle/ac5_1azs_c1c2_golf/ ...
+[1] /home/tamans/home2/test_angle/ac5_1azs_c2c2_gi_n2/
+5 Levels: /home/tamans/home2/test_angle/ac5_1azs_c1c2_golf/ ...
+[1] angles_h.dat
+5 Levels: /home/tamans/home2/test_angle/ac5_1azs_c1c2_golf/ ...
+[1] /home/tamans/home2/test_angle/ac5_1cjk_c2c2_gi_n2/
+5 Levels: /home/tamans/home2/test_angle/ac5_1azs_c1c2_golf/ ...
+[1] angles_h.dat
+5 Levels: /home/tamans/home2/test_angle/ac5_1azs_c1c2_golf/ ...
+> sink("mean_file.txt", append=TRUE)
+> cat(paste0(listmean,"\n")) # to avoid presence of ligne numerotation inthe output file
+> sink()
+> 
+> proc.time()
+   user  system elapsed 
+  1.125   0.078   3.501 
