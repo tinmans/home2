@@ -1,7 +1,9 @@
 #put the path for xvg file and indicate the name of xvg file then the number of this head line to obtain its mean(path1:/home/tamans file1.xvg:17 file2.xvg:18, files locate in the same path want to be indicated following this path). You can change the variable name but, for the path it want inevitably begin by the word path and for the name file by the file. No space is tolerated.
 path1:/home/tamans/home2/test_angle/ac5_1azs_c1c2pbock/
 file1:angles_h.dat
-path2:/home/tamans/home2/test_angle/ac5_1azs_c2c2_gi_n2/
+path2:/home/tamans/home2/test_angle/ac5_1azs_c1c2_golf/
 file2:angles_h.dat
-path3:/home/tamans/home2/test_angle/ac5_1cjk_c2c2_gi_n2/
+path3:/home/tamans/home2/test_angle/ac5_1azs_c2c2_gi_n2/
 file3:angles_h.dat
+path4:/home/tamans/home2/test_angle/ac5_1cjk_c2c2_gi_n2/
+file4:angles_h.dat
