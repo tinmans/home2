@@ -20,8 +20,8 @@ parameters are changed.
 Filename  type[1] atom   atom  level[2]  (0-10)[3] (0-10)[3]   [4]  /WIRE
 
 OUTPUT FILES
-protein      S      1    5358   100.0       1         1        0.1
-inhibitor    S   6016   11464   100.0       8         8        0.1
+protein      S      1    6006   100.0       1         1        0.1
+inhibitor    S   6007   11464   100.0       8         8        0.1
 gaps         G      2       1   100.0       5         5        0.1  SOLID
 
 
