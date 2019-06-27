@@ -32,7 +32,7 @@ EOF
 #4
 #4
 #EOF
-gmx trjconv -pbc mol -center -f /mobi/group/AC5_Trajectories/ac5_1azs_c2c2_gi_n2/md/md_1500.xtc -s /mobi/group/AC5_Trajectories/ac5_1azs_c2c2_gi_n2/md/md-2.tpr -o ac5_1azs_c2c2_gi_n2_dt20_centerpbc.pdb -n -b 400000 -dt 20 << EOF 
+gmx trjconv -pbc mol -center -f /mobi/group/AC5_Trajectories/ac5_1azs_c2c2_gi_n2/md/md_1500.xtc -s /mobi/group/AC5_Trajectories/ac5_1azs_c2c2_gi_n2/md/md-2.tpr -o ac5_1azs_c2c2_gi_n2_dt20_centerpbc.pdb -b 400000 -dt 20 << EOF 
 4
 4
 EOF
